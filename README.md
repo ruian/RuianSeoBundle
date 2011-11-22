@@ -106,4 +106,4 @@ And now see the result in your layout/view
 
 <a name="todo"></a>
 ## TODO
-Make twig views
+Make twig functions..
