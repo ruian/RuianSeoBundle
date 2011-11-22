@@ -21,6 +21,30 @@ class RuianSeoExtension extends Extension
     {
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
+        
+        if (true === array_key_exists('engine', $config)) {
+            $container->setParameter('ruian.seo.engine', $config['engine']);
+        } else {
+            $container->setParameter('ruian.seo.engine', 'php');
+        }
+
+        if (true === array_key_exists('title', $config)) {
+            $container->setParameter('ruian.seo.title', $config['title']);
+        } else {
+            $container->setParameter('ruian.seo.title', 'My website');
+        }
+
+        if (true === array_key_exists('metas', $config)) {
+            $container->setParameter('ruian.seo.metas', $config['metas']);
+        } else {
+            $container->setParameter('ruian.seo.metas', array());
+        }
+
+        if (true === array_key_exists('metas_http_equiv', $config)) {
+            $container->setParameter('ruian.seo.metas_http_equiv', $config['metas_http_equiv']);
+        } else {
+            $container->setParameter('ruian.seo.metas_http_equiv', array());
+        }
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');

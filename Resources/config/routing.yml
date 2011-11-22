@@ -1,3 +1,3 @@
 RuianSeoBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: RuianSeoBundle:Default:index }
+    pattern:  /test/seo/page
+    defaults: { _controller: RuianSeoBundle:Test:index }

@@ -1,7 +1,15 @@
 parameters:
-#    ruian_seo.example.class: Ruian\SeoBundle\Example
+    ruian.seo.page.class: Ruian\SeoBundle\Services\PageService
+    ruian.seo.page.helper.class: Ruian\SeoBundle\Helpers\PageHelper
 
 services:
-#    ruian_seo.example:
-#        class: %ruian_seo.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    ruian.seo.page:
+        class: %ruian.seo.page.class%
+        arguments: [%ruian.seo.title%, %ruian.seo.metas%, %ruian.seo.metas_http_equiv%]
+
+    ruian.seo.page.helper:
+        class: %ruian.seo.page.helper.class%
+        arguments: [@templating, @ruian.seo.page, %ruian.seo.engine%]
+        scope: request
+        tags:
+            - { name: templating.helper, alias: ruian.seo.page }

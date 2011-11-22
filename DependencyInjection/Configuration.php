@@ -24,6 +24,29 @@ class Configuration implements ConfigurationInterface
         // configure your bundle. See the documentation linked above for
         // more information on that topic.
 
+        // Wish : Provide a config like this
+        // ruian_seo:
+        //     engine: twig or php
+        //     title: my title
+        //     metas:
+        //         keywords: some keywords
+        //         description: Some description
+        //         author: Website author
+        //         ...: ...
+        $rootNode
+            ->children()
+                ->scalarNode('engine')->defaultValue('php')->end()
+            ->end()
+            ->children()
+                ->scalarNode('title')->defaultValue('My website')->end()
+            ->end()
+            ->children()
+                ->variableNode('metas')->end()
+            ->end()
+            ->children()
+                ->variableNode('metas_http_equiv')->end()
+            ->end()
+        ;
         return $treeBuilder;
     }
 }
