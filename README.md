@@ -59,6 +59,7 @@ public function registerBundles()
 ## Use it
 
 You can set your title and metas with the DIC
+
 ``` yaml
 #/app/config/config.yml
 ruian_seo:
