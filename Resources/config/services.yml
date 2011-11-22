@@ -1,6 +1,7 @@
 parameters:
     ruian.seo.page.class: Ruian\SeoBundle\Services\PageService
     ruian.seo.page.helper.class: Ruian\SeoBundle\Helpers\PageHelper
+    ruian.seo.page.twig.class: Ruian\SeoBundle\Extensions\PageTwig
 
 services:
     ruian.seo.page:
@@ -13,3 +14,9 @@ services:
         scope: request
         tags:
             - { name: templating.helper, alias: ruian.seo.page }
+    # Helper Twig
+    # ruian.seo.page.twig:
+    #     class: %ruian.seo.page.twig.class%
+    #     arguments: [@ruian.seo.page, %ruian.seo.engine%]
+    #     tags:
+    #         - { name: twig.extension }

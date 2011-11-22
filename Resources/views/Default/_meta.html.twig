@@ -1,0 +1,6 @@
+{% for key, content in metas %}
+<meta name="{{ key }}" content="{{ content }}" />
+{% endfor %}
+{% for key, content in metas_http_equiv %}
+<meta http-equiv="{{ key }}" content="{{ content }}" />
+{% endfor %}
