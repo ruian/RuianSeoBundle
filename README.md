@@ -84,6 +84,7 @@ public function indexAction()
     $this->get('ruian.seo.page')->setMeta('keywords', "Cool, stuff");
     $this->get('ruian.seo.page')->setMeta('description', "a cool description");
     $this->get('ruian.seo.page')->setMetaHttpEquiv('charset', 'utf8');
+    // ...
 )
 ```
 
@@ -96,7 +97,7 @@ And now see the result in your layout/view
     <?php echo $view['ruian.seo.page']->renderMetas() ?>
 </head>
 <body>
-
+    <!-- ... -->
 </body>
 </html>
 ```
