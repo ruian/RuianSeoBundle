@@ -1,0 +1,7 @@
+parameters:
+#    ruian_seo.example.class: Ruian\SeoBundle\Example
+
+services:
+#    ruian_seo.example:
+#        class: %ruian_seo.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
