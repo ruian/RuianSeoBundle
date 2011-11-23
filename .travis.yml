@@ -8,4 +8,6 @@ env:
 
 before_script: php vendor/vendors.php
 
-script: phpunit -c ../../../app Tests/
+script:
+  - ls
+  - pwd
