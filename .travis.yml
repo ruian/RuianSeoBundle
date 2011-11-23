@@ -8,4 +8,4 @@ env:
 
 before_script: php vendor/vendors.php
 
-script: phpunit
+script: phpunit -c app
