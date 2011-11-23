@@ -34,6 +34,18 @@ class RuianSeoExtension extends Extension
             $container->setParameter('ruian.seo.title', 'My website');
         }
 
+        if (true === array_key_exists('title_prefix', $config)) {
+            $container->setParameter('ruian.seo.title_prefix', $config['title_prefix']);
+        } else {
+            $container->setParameter('ruian.seo.title_prefix', null);
+        }
+
+        if (true === array_key_exists('title_suffix', $config)) {
+            $container->setParameter('ruian.seo.title_suffix', $config['title_suffix']);
+        } else {
+            $container->setParameter('ruian.seo.title_suffix', null);
+        }
+
         if (true === array_key_exists('metas', $config)) {
             $container->setParameter('ruian.seo.metas', $config['metas']);
         } else {

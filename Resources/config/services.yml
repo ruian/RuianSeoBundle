@@ -6,7 +6,7 @@ parameters:
 services:
     ruian.seo.page:
         class: %ruian.seo.page.class%
-        arguments: [%ruian.seo.title%, %ruian.seo.metas%, %ruian.seo.metas_http_equiv%]
+        arguments: [%ruian.seo.title%, %ruian.seo.title_prefix%, %ruian.seo.title_suffix%, %ruian.seo.metas%, %ruian.seo.metas_http_equiv%]
 
     ruian.seo.page.helper:
         class: %ruian.seo.page.helper.class%

@@ -10,6 +10,18 @@ class PageService
     protected $title;
 
     /**
+     * String
+     * Page title_prefix
+     */
+    protected $title_prefix;
+
+    /**
+     * String
+     * Page title_suffix
+     */
+    protected $title_suffix;
+
+    /**
      * Array
      * Page metas (Keywords, description, ...)
      */
@@ -21,9 +33,11 @@ class PageService
      */
     protected $metas_http_equiv = array();
 
-    function __construct($title, $metas, $metas_http_equiv)
+    function __construct($title, $title_prefix, $title_suffix, $metas, $metas_http_equiv)
     {
         $this->title = $title;
+        $this->title_prefix = $title_prefix;
+        $this->title_suffix = $title_suffix;
         $this->metas = $metas;
         $this->metas_http_equiv = $metas_http_equiv;
     }
@@ -33,7 +47,7 @@ class PageService
      */
     public function getTitle()
     {
-        return $this->title;
+        return $this->title_prefix . $this->title . $this->title_suffix;
     }
 
     /**
@@ -43,6 +57,40 @@ class PageService
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitlePrefix()
+    {
+        return $this->title_prefix;
+    }
+
+    /**
+     * @return void
+     * @param string $title_prefix
+     */
+    public function setTitlePrefix($title_prefix)
+    {
+        $this->title_prefix = $title_prefix;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitleSuffix()
+    {
+        return $this->title_suffix;
+    }
+
+    /**
+     * @return void
+     * @param string $title_suffix
+     */
+    public function setTitleSuffix($title_suffix)
+    {
+        $this->title_suffix = $title_suffix;
     }
 
     /**
