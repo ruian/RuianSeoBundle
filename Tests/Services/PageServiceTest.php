@@ -18,7 +18,7 @@ class PageServiceTest extends \PHPUnit_Framework_TestCase
             'foo' => 'bar'
         );
 
-        $pageService = new PageService($title, $metas, $metas_http_equiv);
+        $pageService = new PageService($title, $metas, $metas_http_equiv, null);
 
         $this->assertEquals($title, $pageService->getTitle());
         $this->assertEquals($metas, $pageService->getMetas());
