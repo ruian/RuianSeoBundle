@@ -9,11 +9,6 @@ use Ruian\SeoBundle\Services\PageService;
 class PageTwig extends \Twig_Extension
 {
     /**
-     * Template engine twig || php
-     */
-    protected $engine;
-
-    /**
      * PageService
      */
     protected $page;
@@ -23,10 +18,9 @@ class PageTwig extends \Twig_Extension
      */
     protected $environment;
 
-    function __construct(PageService $page, $engine)
+    function __construct(PageService $page)
     {
         $this->page = $page;
-        $this->engine = $engine;
     }
 
     public function initRuntime(\Twig_Environment $environment)
