@@ -90,6 +90,8 @@ public function indexAction()
 
 And now see the result in your layout/view
 
+## PHP
+
 ``` php
 <html>
 <head>
@@ -101,9 +103,22 @@ And now see the result in your layout/view
 </body>
 </html>
 ```
+## TWIG
+
+``` twig
+<html>
+<head>
+    {{ ruian_seo_title() }}
+    {{ ruian_seo_metas() }}
+</head>
+<body>
+    <!-- ... -->
+</body>
+</html>
+```
 
 
 
 <a name="todo"></a>
 ## TODO
-Make twig functions..
+...

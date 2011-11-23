@@ -18,6 +18,11 @@ class PageTwig extends \Twig_Extension
      */
     protected $page;
 
+    /**
+     * Twig_Environment
+     */
+    protected $environment;
+
     function __construct(PageService $page, $engine)
     {
         $this->page = $page;
@@ -32,14 +37,24 @@ class PageTwig extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            'ruian_seo' => new \Twig_Function_Method($this, 'ruian_seo', array('is_safe' => array('html')))
+            'ruian_seo_title' => new \Twig_Function_Method($this, 'renderTitle', array('is_safe' => array('html'))),
+            'ruian_seo_metas' => new \Twig_Function_Method($this, 'renderMetas', array('is_safe' => array('html'))),
         );
     }
 
-    public function ruian_seo()
-    {
-        //var_dump($this->templating);
-        return 'test';
+    public function renderTitle()
+    {   
+        return $this->environment->render('RuianSeoBundle:Default:_title.html.twig', array(
+            'title' => $this->page->getTitle(),
+        ));
+    }
+
+    public function renderMetas()
+    {   
+        return $this->environment->render('RuianSeoBundle:Default:_meta.html.twig', array(
+            'metas' => $this->page->getMetas(),
+            'metas_http_equiv' => $this->page->getMetasHttpEquiv(),
+        ));
     }
 
     public function getName()

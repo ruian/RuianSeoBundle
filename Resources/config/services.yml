@@ -15,8 +15,8 @@ services:
         tags:
             - { name: templating.helper, alias: ruian.seo.page }
     # Helper Twig
-    # ruian.seo.page.twig:
-    #     class: %ruian.seo.page.twig.class%
-    #     arguments: [@ruian.seo.page, %ruian.seo.engine%]
-    #     tags:
-    #         - { name: twig.extension }
+    ruian.seo.page.twig:
+        class: %ruian.seo.page.twig.class%
+        arguments: [@ruian.seo.page, %ruian.seo.engine%]
+        tags:
+            - { name: twig.extension }

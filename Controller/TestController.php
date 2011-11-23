@@ -9,6 +9,6 @@ class TestController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('RuianSeoBundle:Test:index.html.php');
+        return $this->render('RuianSeoBundle:Test:index.html.twig');
     }
 }
