@@ -60,12 +60,14 @@ public function registerBundles()
 <a name="use"></a>
 ## Use it
 
-You can set your title and metas with the DIC
+You can set your title and metas with the DIC (all entries are optional)
 
 ``` yaml
 #/app/config/config.yml
 ruian_seo:
-    title: "My website title"
+    title_prefix: '[FR] '
+    title: "My website is awesome"
+    title_suffix: ' - jgalenski.com'
     metas:
         keywords: "Cool, stuff"
         description: "a cool description"
