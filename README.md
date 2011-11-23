@@ -1,5 +1,7 @@
 RuianSeoBundle
 ===================
+[![Build Status](https://secure.travis-ci.org/ruian/RuianSeoBundle.png)](http://travis-ci.org/ruian/RuianSeoBundle)
+
 
 * [Installation](#installation)
 * [Use it](#use)
