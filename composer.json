@@ -1,0 +1,13 @@
+{
+    "name": "ruian/RuianSeoBundle",
+    "description": "A simple symfony2 bundle to add custom meta to your layout(s)",
+    "authors": [
+        {
+            "name": "Julien 'ruian' Galenski",
+            "email": "galenski.julien@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2"
+    }
+}
