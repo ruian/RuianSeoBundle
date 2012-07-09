@@ -9,5 +9,9 @@
     ],
     "require": {
         "php": ">=5.3.2"
-    }
+    },
+    "autoload": {
+        "psr-0": { "Ruian\\SeoBundle": "" }
+    },
+    "target-dir": "Ruian/SeoBundle"
 }
